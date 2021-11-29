@@ -108,6 +108,21 @@
   margin-left: 0.5rem;
 }
 
+.header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  &:before {
+    content: "";
+    background-color: #4f9cf5;
+    position: fixed;
+    z-index: -1;
+    left:0;
+    right: 0;
+    height: inherit;
+  }
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
