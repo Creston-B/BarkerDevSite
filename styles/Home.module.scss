@@ -28,6 +28,23 @@
   flex-grow: 1;
 }
 
+// .hidden {
+//   display: none;
+// }
+
+.license {
+  padding: 10px;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  width: 90%;
+  margin: 0 auto;
+  border: #fff solid 2px;
+  border-radius: 10px;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -109,10 +126,12 @@
 }
 
 .header {
+  padding: 0 20px;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 80px;
   &:before {
+    // padding: 10px 0;
     content: "";
     background-color: #4f9cf5;
     position: fixed;
@@ -129,3 +148,5 @@
     flex-direction: column;
   }
 }
+
+
