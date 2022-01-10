@@ -32,16 +32,16 @@ export default function Home() {
         <Row className="mt-4 mb-4">
           <Col>
             <h4>Projects</h4>
-            <FadeSet >
-              <p>
+            {/* <FadeSet begin="1000"> */}
+              <p className={styles.fadetest}>
                 some elements here lorem ipsum grada poleri a ipsum lorem a mona
                 ma titi a te
               </p>
               <p>
-                some other elements here lorem ipsum grada poleri a ipsum lorem a mona
-                ma titi a te
+                some other elements here lorem ipsum grada poleri a ipsum lorem
+                a mona ma titi a te
               </p>
-            </FadeSet>
+           {/* </FadeSet> */}
           </Col>
           <Col>
             <h4>Resume</h4>
