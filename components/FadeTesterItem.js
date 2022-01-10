@@ -43,7 +43,7 @@ export default class FadeTester extends Component {
     } = this.props;
     const style = { opacity: 0, transition: ` all ${duration}ms ease-in` };
     const elements = React.Children.map(children, (child) => {
-      return <FadeItem>{child}</FadeItem>;
+      return <FadeTEsterItem>{child}</FadeTEsterItem>;
     });
     return elements;
   }
@@ -63,7 +63,7 @@ export default class FadeTester extends Component {
   }
 }
 
-class FadeTesterItem2 extends Component {
+class FadeTesterItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
