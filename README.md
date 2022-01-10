@@ -3,7 +3,7 @@
 
 This is a personal site to display a sample of my skills and abilities in web development. It is a constant work in progress as I put more time into side projects and learn more of this incredible field.
 
-A hosted version can be found at BarkerDev.ca
+A hosted version can be found at barkerDev.ca
 
 ---
 
