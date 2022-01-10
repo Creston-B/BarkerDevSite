@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import styles from "../styles/Home.module.scss";
 import PropTypes from "prop-types";
-
-/**
- * used to fade child components in on componentDidMount()
- */
+import styles from "/styles/Home.module.scss"
 
 export default class FadeSet extends Component {
   static PropTypes = {
@@ -26,13 +22,6 @@ export default class FadeSet extends Component {
     wait: PropTypes.bool,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      load: false
-    }
-  }
-
   render() {
     const {
       children,
@@ -41,42 +30,20 @@ export default class FadeSet extends Component {
       delay = 0,
       wait = true,
     } = this.props;
-    const style = { opacity: 0, transition: ` all ${duration}ms ease-in` };
-    const elements = React.Children.map(children, (child) => {
-      return <FadeItem>{child}</FadeItem>;
+    const elements = React.Children.map(children, (child, i) => {
+      let totalDelay = wait ? (i * +duration + +delay) + +delay + +begin : (i * +delay) + +begin;
+      console.log(totalDelay)
+      return React.cloneElement(child, {
+        className: `${
+          child.props.className === undefined
+            ? styles["fade-item"]
+            : `${styles["fade-item"]} ${child.props.className}`
+        }`,
+        style: {
+          animation: `fade ${duration}ms ease-in ${totalDelay}ms 1 forwards`,
+        },
+      });
     });
     return elements;
-  }
-
-  componentDidMount() {
-    this.setState({load:true})
-    console.log(`did mount`);
-    const { begin = 0, duration = 200, delay = 0, wait = true } = this.props;
-    const spacing = delay + (wait ? duration : 0);
-    setTimeout(() => {
-      console.log(`entered timeout 1`);
-      React.Children.toArray().forEach((child) => {
-        child.setState(show, true);
-      });
-      setTimeout(() => {}, spacing);
-    }, begin);
-  }
-}
-
-class FadeItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false,
-    };
-  }
-
-  render() {
-    const { children } = this.props;
-    const style = { opacity: 1 };
-    console.log("did render item");
-    return React.cloneElement(children, {
-      style: this.state.show ? style : { opacity: 0 },
-    });
   }
 }
