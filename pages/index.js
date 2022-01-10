@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Container, Row, Col, Fade } from "react-bootstrap";
 import styles from "../styles/Home.module.scss";
 import Layout from "../components/Layout";
-import ContentFade from "../components/ContentFade";
+import FadeSet from "../components/FadeSet";
 
 export default function Home() {
   return (
@@ -32,16 +32,18 @@ export default function Home() {
         <Row className="mt-4 mb-4">
           <Col>
             <h4>Projects</h4>
-            <ContentFade>
+            <FadeSet begin="1000" duration="500" delay="700" wait={false}>
+              <div>
+                <p>
+                  some elements here lorem ipsum grada poleri a ipsum lorem a
+                  mona ma titi a te
+                </p>
+              </div>
               <p>
-                some elements here lorem ipsum grada poleri a ipsum lorem a mona
-                ma titi a te
+                some other elements here lorem ipsum grada poleri a ipsum lorem
+                a mona ma titi a te
               </p>
-              <p>
-                some other elements here lorem ipsum grada poleri a ipsum lorem a mona
-                ma titi a te
-              </p>
-            </ContentFade>
+            </FadeSet>
           </Col>
           <Col>
             <h4>Resume</h4>
