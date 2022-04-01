@@ -1,18 +1,4 @@
-.layout {
-  height: 100vh;
-  display:flex;
-  flex-direction: column;
-}
 
-.header,
-.footer {
-  padding: 10px 0;
-  background-color: steelblue;
-
-  a {
-    color: inherit;
-  }
-}
 
 .fade-item {
   visibility: hidden;

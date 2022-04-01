@@ -4,3 +4,29 @@
   0% {opacity: 0; visibility: visible;}
   100% {opacity: 1; visibility: visible;}
 }
+
+.layout {
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 60px;
+}
+
+.navbar-brand text {
+  padding-top: 2px;
+  margin-top: 2px;
+  line-height: 1px;
+}
+
+.header,
+.footer {
+  padding: 10px 0;
+  background-color: steelblue;
+
+  a {
+    color: inherit;
+  }
+}

@@ -5,7 +5,7 @@ import styles from "/styles/Home.module.scss"
 export default class FadeSet extends Component {
   static PropTypes = {
     /**
-     * @param {number} [begin=0] - time (ms) from load to wait before begining animation
+     * @param {number} [begin=0] - time (ms) from load to wait before beginning animation
      */
     begin: PropTypes.number,
     /**
