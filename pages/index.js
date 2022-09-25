@@ -24,10 +24,7 @@ export default function Home() {
         <Row className="mt-4 mb-4">
           <Col>
             <p className={`${styles["description"]}`}>
-              Junior Developer enthusiastic about creating clean code and
-              solving problems. Recently graduated from the Manitoba Institute
-              of Trades and Technology and experienced with remote work. Always
-              ready for a challenge.
+              Junior Developer enthusiastic about creating clean code and solving problems. Recently graduated from the Manitoba Institute of Trades and Technology and experienced with remote work. Always ready for a challenge.
             </p>
           </Col>
         </Row>
@@ -54,7 +51,7 @@ export default function Home() {
                       <ul>
                         <li>Created website using Next.js 12</li>
                         <li>Elements designed with React-Bootstrap</li>
-                        <li></li>
+                        <li>Prototyped dev builds and updated live websites with feedback</li>
                       </ul>
                     </Card.Body>
                   </Card>
