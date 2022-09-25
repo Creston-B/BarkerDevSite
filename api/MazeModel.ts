@@ -53,3 +53,4 @@ class MazeGrid {
     return(_grid); //-> to be sent to view
   }
 }
+
