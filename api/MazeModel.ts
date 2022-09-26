@@ -1,5 +1,3 @@
-import { NumericLiteral } from "../node_modules/typescript/lib/typescript";
-
 //MVC Model
 class Cell {
   //Connections
@@ -8,6 +6,18 @@ class Cell {
     _Xp: boolean;
     _Xn: boolean;
 
+    get xp() {
+      return(this._Xp)
+    }
+    get xn() {
+      return(this._Xn)
+    }
+    get yp() {
+      return(this._Yp)
+    }
+    get yn() {
+      return(this._Yn)
+    }
     get connections() {
       return ([this._Yp, this._Yn, this._Xp, this._Xn]);
     }
@@ -20,13 +30,15 @@ class Cell {
   }
 }
 
-class MazeGrid {
-  _MazeGrid: Cell[][];
-  _PlayerPos: number[];
+class Player {
+  location: number[] = [0,0];
+}
+
+class Maze {
+  MazeGrid: Cell[][];
 
   constructor(){
-    this._MazeGrid = this.GenerateGrid();
-    this._PlayerPos = [0,0];
+    this.MazeGrid = this.GenerateGrid();
   };
 
   GenerateGrid(): Cell[][]{
@@ -34,12 +46,12 @@ class MazeGrid {
   //call mazegen?
   return (grid)
   }
-
    GetGrid(x: number, y:number, d:number = 3): Cell[][]  {
     let _pattern: number[];
     let _r:number = d+.5;
     let _grid:Cell[][];
     if (_r == 3.5) {
+      //pattern is based on # of tiles extending away from 0 above center tile, mirrored vertically and horizontally
       //pattern can always be read as the final row being centered on the player, or d being = to rows before center row
       //this pattern is hardcoded for the moment, but is based on a distance-test algorithm
       _pattern = [1,2,3,3];
@@ -47,7 +59,7 @@ class MazeGrid {
     //populate a new array of the visible grid around the player
       for(let iy=d;iy>-d;iy--){
         for(let ix=_pattern[iy];ix>-_pattern[iy];ix--) {
-        _grid[iy][ix] = this._MazeGrid[iy+x][ix+y];
+        _grid[iy][ix] = this.MazeGrid[iy+x][ix+y];
       }
     }
     return(_grid); //-> to be sent to view
