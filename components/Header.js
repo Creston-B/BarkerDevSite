@@ -30,26 +30,6 @@ class NavComponent extends Component {
                 aria-controls="responsive-navbar-nav"
               ></Navbar.Toggle>
               <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                  <Nav.Link className="nav-button text-end" href="#About">
-                    <strong>About</strong>
-                  </Nav.Link>
-                </Nav>
-                <Nav className="me-auto">
-                  <Nav.Link className="nav-button text-end" href="#Team">
-                    <strong>Team</strong>
-                  </Nav.Link>
-                </Nav>
-                <Nav className="me-auto">
-                  <Nav.Link className="nav-button text-end" href="#Schedule">
-                    <strong>Schedule</strong>
-                  </Nav.Link>
-                </Nav>
-                <Nav className="me-auto">
-                  <Nav.Link className="nav-button text-end" href="#Present">
-                    <strong>Present</strong>
-                  </Nav.Link>
-                </Nav>
               </Navbar.Collapse>
             </Col>
           </Row>
