@@ -14,21 +14,12 @@
   }
 }
 
+.fade-item {
+  visibility: hidden;
+}
+
 .main {
   background-color: #FFF0F0;
-}
-
-.fade-element {
-  opacity: 0;
-}
-
-.fade-in {
-  animation: fade 4s ease-in;
-}
-
-@keyframes fade {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
 }
 
 @media (max-width: 600px) {
